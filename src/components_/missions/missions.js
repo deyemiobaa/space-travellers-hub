@@ -1,11 +1,25 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './missions.css'
+import { useSelector, useDispatch } from "react-redux";
+import { fetchMissions, updateMission } from "../../redux/missions/missions";
 
 export default function Missions() {
+  const allMissions = useSelector(state => state.missions);
+  const dispatch = useDispatch();
+
+
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, [dispatch]);
+
+  const handleClick = (id) => {
+    dispatch(updateMission(id));
+  }
+
   const activeButton = <button type="button" className="active">Active member</button>
   const inactiveButton = <button type="button" className="inactive">Not a member</button>
-  const joinMission = <button type="button" className="join">Join mission</button>
-  const leaveMission = <button type="button" className="leave">Leave Mission</button>
+  const joinMission = <button type="button" className="join" onClick={handleClick}>Join mission</button>
+  const leaveMission = <button type="button" className="leave" onClick={handleClick}>Leave Mission</button>
 
   return (
     <table>
@@ -15,38 +29,22 @@ export default function Missions() {
         <th>Status</th>
         <th></th>
       </tr>
-      <tr>
-        <td>Ernst Handel</td>
-        <td>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
-          document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy
-          is available.</td>
-        <td><button type="button" className="inactive">Not a member</button></td>
-        <td><button type="button" className="join">Join mission</button></td>
-      </tr>
-      <tr>
-        <td>Telstar</td>
-        <td>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
-          document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy
-          is available.</td>
-        <td><button type="button" className="active">Active member</button></td>
-        <td><button type="button" className="leave">Leave Mission</button></td>
-      </tr>
-      <tr>
-        <td>Ernst Handel</td>
-        <td>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
-          document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy
-          is available.</td>
-        <td><button type="button" className="inactive">Not a member</button></td>
-        <td><button type="button" className="join">Join mission</button></td>
-      </tr>
-      <tr>
-        <td>Island Trading</td>
-        <td>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
-          document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy
-          is available.</td>
-        <td><button type="button" className="inactive">Not a member</button></td>
-        <td><button type="button" className="join">Join mission</button></td>
-      </tr>
+      {allMissions.map(mission => {
+        mission.joined ? 
+          <tr key={mission.id}>
+            <td>{mission.name}</td>
+            <td>{mission.description}</td>
+            <td>{activeButton}</td>
+            <td>{leaveMission}</td>
+          </tr>
+          :
+          <tr key={mission.id}>
+            <td>{mission.name}</td>
+            <td>{mission.description}</td>
+            <td>{inactiveButton}</td>
+            <td>{joinMission}</td>
+          </tr>
+      })}
     </table>
   )
 }
