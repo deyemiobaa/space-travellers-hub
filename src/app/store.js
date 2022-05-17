@@ -1,11 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import missionsReducer from "../redux/missions/missions";
-
+import { configureStore } from '@reduxjs/toolkit';
+import missionsReducer from '../redux/missions/missions';
 
 const store = configureStore({
   reducer: {
-    missions: missionsReducer
-  }
+    missions: missionsReducer,
+  },
 });
 
 export default store;

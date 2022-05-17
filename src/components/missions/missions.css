@@ -26,6 +26,7 @@ tr:nth-child(even) {
 button {
   padding: .5rem;
   border-radius: 7px;
+  width: max-content;
 }
 
 .inactive {

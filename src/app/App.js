@@ -1,12 +1,21 @@
-import Missions from '../components_/missions/missions';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Missions from '../components/missions/missions';
+import Profile from '../components/profile/profile';
+import Nav from '../components/nav/nav';
 import './App.css';
-import { Provider } from 'react-redux';
 
 function App() {
   return (
-    <Provider store={store}>
-      <Missions />
-    </Provider>
+    <Router>
+      <Nav />
+      <div className="App">
+        <Routes>
+          <Route path="/missions" element={<Missions />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
