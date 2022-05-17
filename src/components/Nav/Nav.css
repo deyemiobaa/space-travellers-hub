@@ -1,22 +1,22 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-header{
-    display: flex;
+header {
+  display: flex;
 }
 
-header > ul{
-    display: flex;
+header > ul {
+  display: flex;
 }
 
 header > ul > li {
-    list-style-type: none;
-    margin-right: 10px;
+  list-style-type: none;
+  margin-right: 10px;
 }
 
-h1{
-    flex: 1;
+h1 {
+  flex: 1;
 }
