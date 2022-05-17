@@ -9,7 +9,10 @@ export const initialState = [];
 const fetchRocketsAction = () => async (dispatch)=>{
     const response = await axios.get(url);
     const fetchedRockets = Object.entries(response.data).map((item) => {
-        const { id, rocket_name, description, flickr_images } = item[0]
+        const { id, rocket_name, description, flickr_images } = item[0];
+        return {
+            id
+        }
     })
 }
 export default fetchRocketsAction;
