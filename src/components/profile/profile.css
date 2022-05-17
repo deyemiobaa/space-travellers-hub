@@ -16,8 +16,8 @@
   border-radius: 7px;
 }
 
-.rockets-list>li,
-.missions-list>li {
+.rockets-list > li,
+.missions-list > li {
   border-bottom: 1px solid #a2a1a1;
   padding: 1rem;
 }

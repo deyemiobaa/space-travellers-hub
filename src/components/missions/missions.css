@@ -14,7 +14,7 @@ th {
 
 td,
 th {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   text-align: left;
   padding: 8px;
 }
@@ -24,7 +24,7 @@ tr:nth-child(even) {
 }
 
 button {
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 7px;
   width: max-content;
 }
