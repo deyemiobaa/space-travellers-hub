@@ -5,6 +5,8 @@ import './profile.css';
 export default function Profile() {
   const missionsList = useSelector((state) => state.missions);
   const filteredMissions = missionsList.filter((mission) => mission.joined);
+  const rocketsList = useSelector((state) => state.rockets);
+  const filteredRockets = rocketsList.filter((rocket) => rocket.canceled);
   return (
     <div className="my-profile">
       <div className="my-missions">
@@ -26,7 +28,11 @@ export default function Profile() {
       <div className="my-rockets">
         <h2 className="my-profile-header">My Rockets</h2>
         <ul className="rockets-list">
-          <li>No rockets available</li>
+          {filteredRockets.length >= 1 ? filteredRockets.map((rocket) => (
+            <li key={rocket.rocket_name}>
+              {rocket.rocket_name}
+            </li>
+          )) : <li>No Rockets available ! </li>}
         </ul>
       </div>
     </div>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap');
 
 * {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   border: 0;
   font-size: 100%;
@@ -10,7 +10,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family:
-    'Roboto Slab',
+    'Helvetica',
     serif;
 }
 
