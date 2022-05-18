@@ -4,6 +4,7 @@ import Missions from '../components/missions/missions';
 import Profile from '../components/profile/profile';
 import Nav from '../components/nav/nav';
 import './App.css';
+import Rockets from '../components/rockets/Rockets';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Nav />
       <div className="App">
         <Routes>
+          <Route path="/" element={<Rockets />} />
           <Route path="/missions" element={<Missions />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
