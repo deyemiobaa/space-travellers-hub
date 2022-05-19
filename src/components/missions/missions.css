@@ -7,9 +7,9 @@ tr {
   width: 100%;
 }
 
-th {
+h3 {
+  width: max-content;
   font-weight: 500;
-  font-size: 1.2rem;
 }
 
 td,
@@ -17,6 +17,12 @@ th {
   border: 1px solid #ddd;
   text-align: left;
   padding: 8px;
+  line-height: 26px;
+}
+
+th {
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 tr:nth-child(even) {

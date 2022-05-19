@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css';
+import Logo from './planet-logo.png';
 
 const Nav = () => (
   <header>
-    <h1>Space Travelers&apos; Hub</h1>
+    <img src={Logo} alt="logo" />
+    <h1>
+      Space Travelers&apos; Hub
+    </h1>
     <ul>
       <li>
         <Link to="/">Rockets</Link>

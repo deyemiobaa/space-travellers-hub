@@ -22,7 +22,7 @@ export default function Profile() {
                 {mission.manufacturer}
               </li>
             ))
-            : <li>You have no missions</li>}
+            : <li>You are not part of any mission</li>}
         </ul>
       </div>
       <div className="my-rockets">
