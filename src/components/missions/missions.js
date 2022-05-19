@@ -30,23 +30,20 @@ export default function Missions() {
         </tr>
       </thead>
       <tbody>
-        {allMissions.map((mission) => (mission.joined
-          ? (
-            <tr key={mission.id}>
-              <td><h3>{mission.name}</h3></td>
-              <td>{mission.description}</td>
-              <td>{activeButton}</td>
-              <td><button id={mission.id} type="button" className="leave" onClick={handleClick}>Leave Mission</button></td>
-            </tr>
-          )
-          : (
-            <tr key={mission.id}>
-              <td><h3>{mission.name}</h3></td>
-              <td>{mission.description}</td>
-              <td>{inactiveButton}</td>
-              <td><button id={mission.id} type="button" className="join" onClick={handleClick}>Join mission</button></td>
-            </tr>
-          )))}
+        {allMissions.map((mission) => (
+          <tr key={mission.id}>
+            <td><h3>{mission.name}</h3></td>
+            <td>{mission.description}</td>
+            <td>
+              {mission.joined && activeButton}
+              {!mission.joined && inactiveButton}
+            </td>
+            <td>
+              {mission.joined && <button id={mission.id} type="button" className="leave" onClick={handleClick}>Leave Mission</button>}
+              {!mission.joined && <button id={mission.id} type="button" className="join" onClick={handleClick}>Join Mission</button>}
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
