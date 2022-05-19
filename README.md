@@ -2,22 +2,14 @@
 > A web application for a company that provides commercial and scientific space travel services. To Infinity and Beyond!
 
 ### Built With
-
-- Major languages:  CSS, JavaScript
-- Frameworks: React.js
-- Technologies used: N/A
-
-
-### Prerequisites
-
-- Understand HTML/CSS and JavaScript
+##### REACT.JS, REDUX.JS, CSS
 
 ### Install
 
 - A code editor (preferably VSCode)
 - A browser
 - Node.js (to run javascript files locally)
-- LiveServer (to load javascript modules)
+- LiveServer extension (to load javascript modules from localhost)
 
 ### Getting Started
 
