@@ -4,6 +4,10 @@
 ### Built With
 ##### REACT.JS, REDUX.JS, CSS
 
+![image](https://user-images.githubusercontent.com/55185309/169272726-a5375bcf-4d46-4e1b-80bb-bf6d07a72431.png)
+
+##### [Live Version](https://imaginative-liger-a91ad6.netlify.app/)
+
 ### Install
 
 - A code editor (preferably VSCode)
