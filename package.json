@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
-    "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
     "prop-types": "^15.8.1",
@@ -13,6 +12,7 @@
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-test-renderer": "^18.1.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -40,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.26.0",
