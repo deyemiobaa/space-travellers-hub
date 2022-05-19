@@ -2,6 +2,10 @@
 
 exports[`Navbar Component Test Renders NavBar 1`] = `
 <header>
+  <img
+    alt="logo"
+    src="planet-logo.png"
+  />
   <h1>
     Space Travelers' Hub
   </h1>
