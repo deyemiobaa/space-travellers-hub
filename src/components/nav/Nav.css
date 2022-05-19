@@ -17,3 +17,12 @@ h1 {
   flex: 1;
   font-size: 1.3rem;
 }
+
+.nav-active{
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.nav-active:hover{
+  text-decoration: underline;
+}

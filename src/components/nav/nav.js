@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Nav.css';
 import Logo from './planet-logo.png';
 
@@ -11,13 +11,13 @@ const Nav = () => (
     </h1>
     <ul>
       <li>
-        <Link to="/">Rockets</Link>
+        <NavLink to="/" className="nav-active">Rockets</NavLink>
       </li>
       <li>
-        <Link to="/missions">Missions</Link>
+        <NavLink to="/missions" className="nav-active">Missions</NavLink>
       </li>
       <li>
-        <Link to="/profile">Profile</Link>
+        <NavLink to="/profile" className="nav-active">Profile</NavLink>
       </li>
     </ul>
   </header>
