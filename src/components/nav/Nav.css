@@ -18,11 +18,11 @@ h1 {
   font-size: 1.3rem;
 }
 
-.nav-active{
+.nav-active {
   padding: 3px;
   border-radius: 3px;
 }
 
-.nav-active:hover{
+.nav-active:hover {
   text-decoration: underline;
 }
