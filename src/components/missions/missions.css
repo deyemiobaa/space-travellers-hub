@@ -1,0 +1,55 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  width: 100%;
+}
+
+h3 {
+  width: max-content;
+  font-weight: 500;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+  line-height: 26px;
+}
+
+th {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+button {
+  padding: 0.5rem;
+  border-radius: 7px;
+  width: max-content;
+}
+
+.inactive {
+  background-color: #c2c1c1;
+}
+
+.active-btn {
+  background-color: #4386bf;
+  color: #fff;
+}
+
+.join {
+  border: 2px solid green;
+  color: green;
+}
+
+.leave {
+  border: 2px solid red;
+  color: red;
+}
